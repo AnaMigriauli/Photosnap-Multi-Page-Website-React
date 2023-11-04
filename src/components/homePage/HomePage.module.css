@@ -1,0 +1,48 @@
+.maincontainer1 {
+  width: 375px;
+  background-color: var(--black);
+}
+.textcontainer1 {
+  height: 419px;
+  color: var(--white);
+  padding: 72px 24px 72px 33px;
+}
+.header {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 3.333px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  opacity: 0.6;
+  margin-bottom: 23px;
+}
+.link {
+  display: flex;
+  gap: 18px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.maincontainer2 {
+  width: 375px;
+  background-color: var(--white);
+}
+
+.textcontainer2 {
+  height: 419px;
+  color: var(--black);
+  padding: 72px 24px 72px 33px;
+}
+
+.textcontainer3 {
+  height: 419px;
+  color: var(--black);
+  padding: 92px 24px 92px 33px;
+}
