@@ -4,19 +4,19 @@ const ContentCard = ({
   title,
   link,
   arrow,
-  containerstyle,
-  headerstyle,
-  textstyle,
-  linkstyle,
-  maincontainer,
+  containerStyle,
+  headerStyle,
+  textStyle,
+  linkStyle,
+  mainContainer,
 }) => {
   return (
-    <div className={maincontainer}>
+    <div className={mainContainer}>
       <img src={img} />
-      <div className={containerstyle}>
-        <h1 className={headerstyle}>{title}</h1>
-        <p className={textstyle}>{text}</p>
-        <div className={linkstyle}>
+      <div className={containerStyle}>
+        <h1 className={headerStyle}>{title}</h1>
+        <p className={textStyle}>{text}</p>
+        <div className={linkStyle}>
           <p>{link}</p>
           <img src={arrow} />
         </div>
