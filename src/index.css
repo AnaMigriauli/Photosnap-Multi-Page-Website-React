@@ -20,4 +20,10 @@
     rgba(0, 0, 0, 0) 0.27%,
     rgba(0, 0, 0, 0.66) 100%
   );
+  --gradient-multi-color: linear-gradient(
+    27deg,
+    #ffc593 0%,
+    #bc7198 43.29%,
+    #5a77ff 83.33%
+  );
 }

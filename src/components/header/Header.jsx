@@ -6,6 +6,9 @@ const Header = () => {
         <li>
           <Link to="stories">STORIES</Link>
         </li>
+        <li>
+          <Link to="feature">FEATURE</Link>
+        </li>
       </ul>
     </div>
   );

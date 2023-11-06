@@ -13,11 +13,13 @@ const ImageCard = ({
   linkContainer,
   data,
   dataStyle,
+  multiColorBorderStyle,
 }) => {
   return (
     <div className={cardStyle}>
       <img src={img} alt="nature picture" />
       <div className={contentStyle}>
+        <div className={multiColorBorderStyle}></div>
         {data && <span className={dataStyle}>{data}</span>}
         <h2 className={titleStyle}>{title}</h2>
         <p className={textStyle}>{text}</p>
