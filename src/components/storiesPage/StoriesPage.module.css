@@ -44,3 +44,51 @@
   font-weight: 700;
   letter-spacing: 2px;
 }
+.main-card {
+  position: relative;
+}
+.main-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--gradient-White-Black);
+  z-index: 2;
+}
+.content {
+  position: absolute;
+  color: var(--white);
+  bottom: 40px;
+  left: 41.67px;
+  right: 41.67px;
+  z-index: 3;
+}
+.data {
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 4px;
+}
+.author {
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.border {
+  opacity: 0.25;
+  background-color: var(--white);
+  width: 100%;
+  height: 1px;
+  margin-bottom: 20px;
+}
+.link-container {
+  display: flex;
+  justify-content: space-between;
+}
