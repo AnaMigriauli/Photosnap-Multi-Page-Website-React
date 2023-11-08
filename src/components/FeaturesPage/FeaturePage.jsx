@@ -8,9 +8,8 @@ import icon3 from "../../assets/images/003-bullhorn.svg";
 import icon4 from "../../assets/images/001-www.svg";
 import icon5 from "../../assets/images/001-drag.svg";
 import icon6 from "../../assets/images/002-slider.svg";
-import ImageCard from "../reusable/ImageCard";
-import im2 from "../../assets/images/feature-2.svg";
-import arrow from "../../assets/images/arrow.svg";
+
+import InvitatinCard from "../reusable/InvitationCard";
 
 const featureCardData = [
   {
@@ -69,18 +68,8 @@ const FeaturePage = () => {
           featureTextStyle={style["feature-text"]}
         />
       ))}
-      <ImageCard
-        img={im2}
-        title="We’re in beta.Get your invite today!"
-        link="GET AN INVITE"
-        arrow={arrow}
-        cardStyle={style["main-card"]}
-        contentStyle={style.content}
-        titleStyle={style.title}
-        linkContainer={style["link-container"]}
-        linkStyle={style.link}
-        multiColorBorderStyle={style["multi-color-border"]}
-      />
+
+      <InvitatinCard />
     </>
   );
 };

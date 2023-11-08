@@ -9,6 +9,9 @@ const Header = () => {
         <li>
           <Link to="feature">FEATURE</Link>
         </li>
+        <li>
+          <Link to="pricing">PRICING</Link>
+        </li>
       </ul>
     </div>
   );

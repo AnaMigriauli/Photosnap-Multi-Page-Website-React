@@ -121,7 +121,7 @@ const imageCardData = [
 
 const StoriesPage = () => {
   return (
-    <div>
+    <>
       <ContentCard
         img={img1}
         storie="LAST MONTH’S FEATURED STORY"
@@ -158,7 +158,7 @@ const StoriesPage = () => {
           linkContainer={styles["link-container"]}
         />
       ))}
-    </div>
+    </>
   );
 };
 
