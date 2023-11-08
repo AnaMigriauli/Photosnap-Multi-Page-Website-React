@@ -11,16 +11,24 @@ const Footer = () => {
       <img src={socialMediaIcons} className={style["social-media"]} />
       <ul>
         <li>
-          <Link className={style.link}>HOME</Link>
+          <Link to="" className={style.link}>
+            HOME
+          </Link>
         </li>
         <li>
-          <Link className={style.link}>STORIES</Link>
+          <Link to="stories" className={style.link}>
+            STORIES
+          </Link>
         </li>
         <li>
-          <Link className={style.link}>FEATURES</Link>
+          <Link to="feature" className={style.link}>
+            FEATURES
+          </Link>
         </li>
         <li>
-          <Link className={style.link}>PRICING</Link>
+          <Link to="pricing" className={style.link}>
+            PRICING
+          </Link>
         </li>
       </ul>
       <div className={style["link-container"]}>
