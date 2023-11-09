@@ -41,6 +41,9 @@ ul li a {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+ul li a:hover {
+  opacity: 0.3;
+}
 .invite-btn {
   height: 48px;
   width: 100%;
@@ -50,4 +53,8 @@ ul li a {
   font-weight: 700;
   letter-spacing: 2.5px;
   border: none;
+}
+.invite-btn:hover {
+  background-color: var(--gray);
+  color: var(--black);
 }

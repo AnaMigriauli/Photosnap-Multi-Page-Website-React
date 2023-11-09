@@ -14,6 +14,7 @@ const ImageCard = ({
   data,
   dataStyle,
   multiColorBorderStyle,
+  arrowIconStyle,
 }) => {
   return (
     <div className={cardStyle}>
@@ -26,7 +27,7 @@ const ImageCard = ({
         <div className={borderStyle}></div>
         <div className={linkContainer}>
           <span className={linkStyle}>{link}</span>
-          <img src={arrow} />
+          <img className={arrowIconStyle} src={arrow} alt="arrow" />
         </div>
       </div>
     </div>

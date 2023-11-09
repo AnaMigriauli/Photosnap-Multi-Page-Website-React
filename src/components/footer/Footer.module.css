@@ -15,6 +15,7 @@
 }
 .social-media {
   margin-bottom: 49px;
+  cursor: pointer;
 }
 ul {
   display: flex;
@@ -31,6 +32,9 @@ ul {
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
+}
+.link:hover {
+  opacity: 0.3;
 }
 .invite-link {
   color: var(--white);

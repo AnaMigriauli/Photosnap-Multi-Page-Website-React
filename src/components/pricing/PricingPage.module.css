@@ -1,11 +1,19 @@
 .main-container {
   background: var(--black);
 }
+.main-container img {
+  display: block;
+}
 .container {
   width: 375px;
   height: 300px;
   color: var(--white);
-  padding: 72px 28px 72px 29px;
+  padding: 0 28px 72px 29px;
+}
+.border {
+  width: 128px;
+  height: 6px;
+  background: var(--gradient-multi-color);
 }
 .header {
   font-size: 32px;
@@ -15,6 +23,7 @@
   letter-spacing: 3.333px;
   text-transform: uppercase;
   margin-bottom: 16px;
+  margin-top: 72px;
 }
 .text {
   font-size: 15px;
@@ -23,13 +32,26 @@
   line-height: 25px;
   opacity: 0.6;
 }
+.month-year-active {
+  color: var(--black);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+}
+.month-year {
+  opacity: 0.5;
+  color: var(--black);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+}
 .price-feature-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* padding: 0 29px 0 28px;
-  width: 375px; */
 }
 .toggle-month-year {
   display: flex;

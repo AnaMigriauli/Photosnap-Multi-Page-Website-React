@@ -11,20 +11,26 @@ const priceCardData = [
   {
     title: "Basic",
     text: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
-    price: "$19.00",
+    priceMonth: "$19.00",
     month: "per month",
+    priceYear: "$190.00",
+    year: "per year",
   },
   {
     title: "Pro",
     text: "More advanced features available. Recommended for photography veterans and professionals.",
-    price: "$39.00",
+    priceMonth: "$39.00",
     month: "per month",
+    priceYear: "$390.00",
+    year: "per year",
   },
   {
     title: "Business",
     text: "Additional features available such as more detailed metrics. Recommended for business owners.",
-    price: "$99.00",
+    priceMonth: "$99.00",
     month: "per month",
+    priceYear: "$990.00",
+    year: "per year",
   },
 ];
 
@@ -75,6 +81,7 @@ const featureTableData = [
 
 const PricingPage = () => {
   const [isLeft, setIsLeft] = useState(false);
+
   const [active, setActive] = useState([
     { id: 0, active: false },
     { id: 1, active: true },
@@ -96,13 +103,22 @@ const PricingPage = () => {
         title="PRICING"
         text="Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos."
         containerStyle={style.container}
+        border={style.border}
         mainContainer={style["main-container"]}
         headerStyle={style.header}
         textStyle={style.text}
       />
       <div className={style["price-feature-container"]}>
         <div className={style["toggle-month-year"]}>
-          <span>Monthly</span>
+          <span
+            className={
+              !isLeft
+                ? `${style["month-year"]}`
+                : `${style["month-year-active"]}`
+            }
+          >
+            Monthly
+          </span>
 
           <div
             className={style["button-container"]}
@@ -113,15 +129,23 @@ const PricingPage = () => {
               onClick={toggleButtonHandler}
             ></button>
           </div>
-          <span>Yearly</span>
+          <span
+            className={
+              isLeft
+                ? `${style["month-year"]}`
+                : `${style["month-year-active"]}`
+            }
+          >
+            Yearly
+          </span>
         </div>
         {priceCardData.map((data, i) => (
           <PriceCard
             key={i}
             title={data.title}
             text={data.text}
-            price={data.price}
-            month={data.month}
+            price={isLeft ? data.priceMonth : data.priceYear}
+            month={isLeft ? data.month : data.year}
             borderTopStyle={active[i].active && style["border-top"]}
             priceContainerStyle={
               active[i].active

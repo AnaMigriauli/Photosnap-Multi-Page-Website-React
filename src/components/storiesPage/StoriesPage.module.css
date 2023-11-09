@@ -47,6 +47,31 @@
 .main-card {
   position: relative;
 }
+.main-card img {
+  display: block;
+}
+.main-card {
+  transition: transform 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+}
+.main-card::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  background: var(--gradient-multi-color);
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.main-card:hover {
+  transform: translateY(-10px);
+}
+.main-card:hover::before {
+  width: 100%;
+  z-index: 5;
+}
 .main-card::after {
   content: "";
   position: absolute;

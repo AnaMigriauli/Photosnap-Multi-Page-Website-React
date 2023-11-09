@@ -19,6 +19,8 @@ const cardData = [
   {
     containerStyle: style["text-container1"],
     mainContainer: style["main-container1"],
+    border: style["multi-color-border"],
+    headerStyle: style.header1,
     img: img1,
     arrow: arrow,
     title: "Create and share your photo stories. ",
@@ -28,6 +30,7 @@ const cardData = [
   {
     containerStyle: style["text-container2"],
     mainContainer: style["main-container2"],
+    headerStyle: style.header,
     img: img2,
     arrow: arrowBlack,
     title: "BEAUTIFUL STORIES EVERY TIME",
@@ -37,6 +40,7 @@ const cardData = [
   {
     containerStyle: style["text-container3"],
     mainContainer: style["main-container2"],
+    headerStyle: style.header,
     img: img3,
     arrow: arrowBlack,
     title: "DESIGNED FOR EVERYONE",
@@ -94,7 +98,8 @@ const HomePage = () => {
           key={i}
           containerStyle={card.containerStyle}
           mainContainer={card.mainContainer}
-          headerStyle={style.header}
+          border={card.border}
+          headerStyle={card.headerStyle}
           textStyle={style.text}
           linkStyle={style.link}
           img={card.img}
@@ -102,6 +107,7 @@ const HomePage = () => {
           title={card.title}
           link={card.link}
           text={card.text}
+          arrowIconStyle={style["arrow-icon"]}
         />
       ))}
 
@@ -120,6 +126,7 @@ const HomePage = () => {
           textStyle={style.author}
           linkStyle={style["link-style"]}
           linkContainer={style["container-style"]}
+          arrowIconStyle={style["arrow-icon2"]}
         />
       ))}
       {FeatureCardData.map((card, i) => (

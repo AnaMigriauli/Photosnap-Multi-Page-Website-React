@@ -5,31 +5,31 @@ import arrow from "../../assets/images/arrow.svg";
 import socialMediaIcons from "../../assets/images/social media icons.svg";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const navigationLinks = [
+    { path: "", name: "home" },
+    { path: "stories", name: "STORIES" },
+    { path: "feature", name: "FEATURES" },
+    { path: "pricing", name: "PRICING" },
+  ];
   return (
     <div className={style["footer-container"]}>
       <img src={logo} alt="logo" className={style.logo} />
       <img src={socialMediaIcons} className={style["social-media"]} />
       <ul>
-        <li>
-          <Link to="" className={style.link}>
-            HOME
-          </Link>
-        </li>
-        <li>
-          <Link to="stories" className={style.link}>
-            STORIES
-          </Link>
-        </li>
-        <li>
-          <Link to="feature" className={style.link}>
-            FEATURES
-          </Link>
-        </li>
-        <li>
-          <Link to="pricing" className={style.link}>
-            PRICING
-          </Link>
-        </li>
+        {navigationLinks.map((link) => (
+          <li key={link.name}>
+            <Link to={link.path} className={style.link} onClick={scrollToTop}>
+              {link.name}
+            </Link>
+          </li>
+        ))}
       </ul>
       <div className={style["link-container"]}>
         <span className={style["invite-link"]}>GET AN INVITE</span>

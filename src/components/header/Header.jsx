@@ -2,38 +2,46 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo-black.svg";
 import lines from "../../assets/images/header lines.svg";
 import style from "./Header.module.css";
+import X from "../../assets/images/Group 2.svg";
 
 const Header = ({ isOpenNavigation, setIsOpenNavigation }) => {
-  const navigationOpenHandler = () => {
-    setIsOpenNavigation(!isOpenNavigation);
-  };
+  const toggleNavigationHandler = () =>
+    setIsOpenNavigation((prevState) => !prevState);
+
+  const navigationLink = [
+    { path: "stories", name: "STORIES" },
+    { path: "feature", name: "FEATURES" },
+    { path: "pricing", name: "PRICING" },
+  ];
 
   return (
     <div>
       <div className={style.header}>
-        <Link to="" className={style.btn}>
+        <Link to="/" className={style.btn}>
           <img src={logo} alt="" />
         </Link>
-        <button className={style.btn} onClick={navigationOpenHandler}>
-          <img src={lines} alt="" />
+        <button className={style.btn} onClick={toggleNavigationHandler}>
+          {isOpenNavigation ? (
+            <img src={X} alt="" />
+          ) : (
+            <img src={lines} alt="" />
+          )}
         </button>
       </div>
       {isOpenNavigation && (
-        <div className={style["burger-menu"]}>
+        <nav className={style["burger-menu"]}>
           <ul className={style.list}>
-            <li>
-              <Link to="stories">STORIES</Link>
-            </li>
-            <li>
-              <Link to="feature">FEATURE</Link>
-            </li>
-            <li>
-              <Link to="pricing">PRICING</Link>
-            </li>
+            {navigationLink.map((link) => (
+              <li key={link.name}>
+                <Link to={link.path} onClick={toggleNavigationHandler}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
           <div className={style.border}></div>
           <button className={style["invite-btn"]}>GET AN INVITE</button>
-        </div>
+        </nav>
       )}
     </div>
   );

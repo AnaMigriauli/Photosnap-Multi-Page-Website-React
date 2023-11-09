@@ -14,11 +14,14 @@ const ContentCard = ({
   data,
   storieStyle,
   dataAuthorStyle,
+  border,
+  arrowIconStyle,
 }) => {
   return (
     <div className={mainContainer}>
       <img src={img} />
       <div className={containerStyle}>
+        <div className={border}></div>
         {storie && <h4 className={storieStyle}>{storie}</h4>}
         <h1 className={headerStyle}>{title}</h1>
         {data && author && (
@@ -28,10 +31,12 @@ const ContentCard = ({
           </div>
         )}
         <p className={textStyle}>{text}</p>
-        <div className={linkStyle}>
-          <p>{link}</p>
-          <img src={arrow} />
-        </div>
+        {link && (
+          <div className={linkStyle}>
+            <p>{link}</p>
+            <img className={arrowIconStyle} src={arrow} alt="arrow icon" />
+          </div>
+        )}
       </div>
     </div>
   );
