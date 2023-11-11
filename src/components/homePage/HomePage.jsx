@@ -14,14 +14,20 @@ import img7 from "../../assets/images/home-7.svg";
 import img8 from "../../assets/images/001-responsive.svg";
 import img9 from "../../assets/images/002-forever.svg";
 import img10 from "../../assets/images/003-bullhorn.svg";
+import img1Tablet from "../../assets/images/home-1-tablet.svg";
+import img2Tablet from "../../assets/images/home-2-tablet.svg";
+import img3Tablet from "../../assets/images/home-3-tablet.svg";
 
 const cardData = [
   {
     containerStyle: style["text-container1"],
     mainContainer: style["main-container1"],
-    border: style["multi-color-border"],
+    border:
+      window.innerWidth >= 768
+        ? style["multi-color-left-border "]
+        : style["multi-color-border"],
     headerStyle: style.header1,
-    img: img1,
+    img: window.innerWidth >= 768 ? img1Tablet : img1,
     arrow: arrow,
     title: "Create and share your photo stories. ",
     link: "GET AN INVITE",
@@ -31,7 +37,7 @@ const cardData = [
     containerStyle: style["text-container2"],
     mainContainer: style["main-container2"],
     headerStyle: style.header,
-    img: img2,
+    img: window.innerWidth >= 768 ? img2Tablet : img2,
     arrow: arrowBlack,
     title: "BEAUTIFUL STORIES EVERY TIME",
     link: "VIEW THE STORIES",
@@ -41,7 +47,7 @@ const cardData = [
     containerStyle: style["text-container3"],
     mainContainer: style["main-container2"],
     headerStyle: style.header,
-    img: img3,
+    img: window.innerWidth >= 768 ? img3Tablet : img3,
     arrow: arrowBlack,
     title: "DESIGNED FOR EVERYONE",
     link: "VIEW THE STORIES",
@@ -108,39 +114,44 @@ const HomePage = () => {
           link={card.link}
           text={card.text}
           arrowIconStyle={style["arrow-icon"]}
+          imgStyle={style["backgound-img"]}
         />
       ))}
-
-      {imageCardData.map((card, i) => (
-        <ImageCard
-          key={i}
-          img={card.img}
-          title={card.title}
-          text={card.text}
-          link="READ STORY"
-          arrow={arrow}
-          cardStyle={style["image-card"]}
-          contentStyle={style["content-container"]}
-          borderStyle={style.border}
-          titleStyle={style.title}
-          textStyle={style.author}
-          linkStyle={style["link-style"]}
-          linkContainer={style["container-style"]}
-          arrowIconStyle={style["arrow-icon2"]}
-        />
-      ))}
-      {FeatureCardData.map((card, i) => (
-        <FeatureCard
-          key={i}
-          img={card.img}
-          title={card.title}
-          text={card.text}
-          featureCardStyle={style["feature-card"]}
-          featureIconStyle={style["feature-icon"]}
-          featureTitleStyle={style["feature-title"]}
-          featureTextStyle={style["feature-text"]}
-        />
-      ))}
+      <div className={style["img-card"]}>
+        {imageCardData.map((card, i) => (
+          <ImageCard
+            key={i}
+            img={card.img}
+            title={card.title}
+            text={card.text}
+            link="READ STORY"
+            arrow={arrow}
+            cardStyle={style["image-card"]}
+            contentStyle={style["content-container"]}
+            borderStyle={style.border}
+            titleStyle={style.title}
+            textStyle={style.author}
+            linkStyle={style["link-style"]}
+            linkContainer={style["container-style"]}
+            arrowIconStyle={style["arrow-icon2"]}
+            imgStyle={style["backgound-img1"]}
+          />
+        ))}
+      </div>
+      <div className={style["feature"]}>
+        {FeatureCardData.map((card, i) => (
+          <FeatureCard
+            key={i}
+            img={card.img}
+            title={card.title}
+            text={card.text}
+            featureCardStyle={style["feature-card"]}
+            featureIconStyle={style["feature-icon"]}
+            featureTitleStyle={style["feature-title"]}
+            featureTextStyle={style["feature-text"]}
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,12 +1,14 @@
 .main-container {
-  width: 375px;
-  background-color: var(--black);
+  /* width: 375px; */
+  width: 100%;
 }
 .container {
   color: var(--white);
+  background-color: var(--black);
   height: 300px;
   padding: 72px 28px 72px 29px;
 }
+
 .header {
   font-size: 32px;
   font-weight: 700;
@@ -22,7 +24,8 @@
   opacity: 0.6;
 }
 .feature-card {
-  width: 375px;
+  /* width: 375px; */
+  width: 100%;
   background-color: var(--white);
   color: var(--black);
   padding: 64px 32px 91px 33px;
@@ -42,4 +45,33 @@
   font-size: 15px;
   font-weight: 400;
   line-height: 25px;
+}
+@media (min-width: 768px) {
+  .main-container {
+    display: flex;
+    height: 650px;
+  }
+  .container {
+    order: 1;
+    height: 100%;
+    padding: 240px 54px;
+  }
+  .feature-img {
+    order: 2;
+    height: 100%;
+  }
+  .header {
+    font-size: 40px;
+    margin-bottom: 21px;
+  }
+  .feature-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 112px 39px;
+    grid-column-gap: 11px;
+    grid-row-gap: 72px;
+  }
+  .feature-card {
+    padding: 0;
+  }
 }

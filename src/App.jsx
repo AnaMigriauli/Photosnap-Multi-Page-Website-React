@@ -8,10 +8,10 @@ import PricingPage from "./components/pricing/PricingPage";
 
 const router = createBrowserRouter([
   {
-    path: "",
+    path: "Photosnap-Multi-Page-Website-React",
     element: <RootLayout />,
     children: [
-      { path: "/", element: <HomePage /> },
+      { path: "", element: <HomePage /> },
       { path: "stories", element: <StoriesPage /> },
       { path: "feature", element: <FeaturePage /> },
       { path: "pricing", element: <PricingPage /> },

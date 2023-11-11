@@ -15,10 +15,11 @@ const ImageCard = ({
   dataStyle,
   multiColorBorderStyle,
   arrowIconStyle,
+  imgStyle,
 }) => {
   return (
     <div className={cardStyle}>
-      <img src={img} alt="nature picture" />
+      <img className={imgStyle} src={img} alt="nature picture" />
       <div className={contentStyle}>
         <div className={multiColorBorderStyle}></div>
         {data && <span className={dataStyle}>{data}</span>}

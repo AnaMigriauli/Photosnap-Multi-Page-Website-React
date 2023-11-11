@@ -6,6 +6,7 @@ import PriceCard from "../reusable/PriceCard";
 import FeatureTable from "../reusable/FeatureTable";
 import vector from "../../assets/images/Path 5 Copy.svg";
 import InvitatinCard from "../reusable/InvitationCard";
+import img1Tablet from "../../assets/images/price-1-Tablet.svg";
 
 const priceCardData = [
   {
@@ -99,7 +100,7 @@ const PricingPage = () => {
   return (
     <>
       <ContentCard
-        img={img1}
+        img={window.innerWidth >= 768 ? img1Tablet : img1}
         title="PRICING"
         text="Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos."
         containerStyle={style.container}

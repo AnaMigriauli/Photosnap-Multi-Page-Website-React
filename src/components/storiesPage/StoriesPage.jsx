@@ -138,26 +138,29 @@ const StoriesPage = () => {
         dataAuthorStyle={styles["data-author"]}
         textStyle={styles.text}
         linkStyle={styles.link}
+        imgStyle={styles["baground-img"]}
       />
-
-      {imageCardData.map((data, i) => (
-        <ImageCard
-          key={i}
-          data={data.data}
-          img={data.img}
-          title={data.title}
-          text={data.text}
-          link="READ STORY"
-          cardStyle={styles["main-card"]}
-          arrow={arrow}
-          contentStyle={styles.content}
-          dataStyle={styles.data}
-          titleStyle={styles.title}
-          textStyle={styles.author}
-          borderStyle={styles.border}
-          linkContainer={styles["link-container"]}
-        />
-      ))}
+      <div className={styles["image-card"]}>
+        {imageCardData.map((data, i) => (
+          <ImageCard
+            key={i}
+            data={data.data}
+            img={data.img}
+            title={data.title}
+            text={data.text}
+            link="READ STORY"
+            cardStyle={styles["main-card"]}
+            arrow={arrow}
+            contentStyle={styles.content}
+            dataStyle={styles.data}
+            titleStyle={styles.title}
+            textStyle={styles.author}
+            borderStyle={styles.border}
+            linkContainer={styles["link-container"]}
+            imgStyle={styles["main-card-img"]}
+          />
+        ))}
+      </div>
     </>
   );
 };

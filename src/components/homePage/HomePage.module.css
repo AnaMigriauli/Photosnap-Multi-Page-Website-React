@@ -1,13 +1,19 @@
 .main-container1 {
-  width: 375px;
-  background-color: var(--black);
+  /* width: 375px; */
+  width: 100%;
 }
-.main-container1 img {
+.backgound-img {
   display: block;
+  width: 100%;
+}
+.backgound-img1 {
+  display: block;
+  width: 100%;
 }
 .text-container1 {
   height: 419px;
   color: var(--white);
+  background-color: var(--black);
   padding: 0 24px 72px 33px;
 }
 .multi-color-border {
@@ -52,7 +58,7 @@
   letter-spacing: 2px;
   cursor: pointer;
 }
-.link:hover .arrow-icon {
+.link:hover.arrow-icon {
   transform: translateX(10px);
   transition: transform 0.3s ease;
 }
@@ -60,7 +66,7 @@
   transition: transform 0.3s ease;
 }
 .main-container2 {
-  width: 375px;
+  width: 100%;
   background-color: var(--white);
 }
 
@@ -81,9 +87,6 @@
   display: block;
 }
 
-.image-card img {
-  display: block;
-}
 .image-card::after {
   content: "";
   position: absolute;
@@ -96,8 +99,9 @@
 }
 .content-container {
   position: absolute;
+  width: 80%;
   bottom: 40px;
-  left: 33px;
+  left: 41.67px;
   color: var(--white);
   z-index: 3;
 }
@@ -136,12 +140,12 @@
 .container-style {
   display: flex;
   justify-content: space-between;
-  gap: 177px;
   cursor: pointer;
 }
 
 .feature-card {
-  width: 375px;
+  /* width: 375px; */
+  width: 100%;
   padding: 80px 32px 56px 33px;
   display: flex;
   justify-content: center;
@@ -168,4 +172,59 @@
   line-height: 25px;
   opacity: 0.6;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .main-container1 {
+    display: flex;
+    height: 650px;
+  }
+  .backgound-img {
+    order: 2;
+    width: 273px;
+    height: 100%;
+  }
+  .text-container1 {
+    height: 100%;
+    padding: 173px 54px;
+    order: 1;
+  }
+  .header1,
+  .header {
+    font-size: 40px;
+    margin-bottom: 21px;
+    margin-top: 0;
+  }
+  .text {
+    margin-bottom: 48px;
+  }
+  .multi-color-left-border {
+    border-left: 6px solid red;
+    height: 304px;
+  }
+  .main-container2,
+  .main-container3 {
+    display: flex;
+    height: 600px;
+  }
+  .text-container2 {
+    order: 2;
+    padding: 136px 54px 135px 54px;
+    height: 100%;
+  }
+  .img-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .text-container3 {
+    padding: 136px 54px 135px 54px;
+    height: 100%;
+  }
+  .feature-card {
+    margin-bottom: 80px;
+    padding: 0;
+  }
+  .feature {
+    padding: 120px 155px;
+  }
 }

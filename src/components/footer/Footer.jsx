@@ -20,22 +20,26 @@ const Footer = () => {
   ];
   return (
     <div className={style["footer-container"]}>
-      <img src={logo} alt="logo" className={style.logo} />
-      <img src={socialMediaIcons} className={style["social-media"]} />
-      <ul>
-        {navigationLinks.map((link) => (
-          <li key={link.name}>
-            <Link to={link.path} className={style.link} onClick={scrollToTop}>
-              {link.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <div className={style["link-container"]}>
-        <span className={style["invite-link"]}>GET AN INVITE</span>
-        <img src={arrow} />
+      <div className={style["footer-nav"]}>
+        <img src={logo} alt="logo" className={style.logo} />
+        <img src={socialMediaIcons} className={style["social-media"]} />
+        <ul className={style["social-media-list"]}>
+          {navigationLinks.map((link) => (
+            <li key={link.name}>
+              <Link to={link.path} className={style.link} onClick={scrollToTop}>
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
-      <p className={style.copyright}>Copyright 2023. All Rights Reserved</p>
+      <div className={style["link"]}>
+        <div className={style["link-container"]}>
+          <span className={style["invite-link"]}>GET AN INVITE</span>
+          <img src={arrow} />
+        </div>
+        <p className={style.copyright}>Copyright 2023. All Rights Reserved</p>
+      </div>
     </div>
   );
 };

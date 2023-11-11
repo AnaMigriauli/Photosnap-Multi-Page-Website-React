@@ -8,8 +8,8 @@ import icon3 from "../../assets/images/003-bullhorn.svg";
 import icon4 from "../../assets/images/001-www.svg";
 import icon5 from "../../assets/images/001-drag.svg";
 import icon6 from "../../assets/images/002-slider.svg";
-
 import InvitatinCard from "../reusable/InvitationCard";
+import img1Table from "../../assets/images/feature-1-Table.svg";
 
 const featureCardData = [
   {
@@ -48,27 +48,28 @@ const FeaturePage = () => {
   return (
     <>
       <ContentCard
-        img={img1}
+        img={window.innerWidth >= 768 ? img1Table : img1}
         title="FEATURES"
         text="We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories."
         mainContainer={style["main-container"]}
         containerStyle={style.container}
         headerStyle={style.header}
-        textStyle={style.text}
+        imgStyle={style["feature-img"]}
       />
-      {featureCardData.map((data, i) => (
-        <FeatureCard
-          key={i}
-          img={data.img}
-          title={data.title}
-          text={data.text}
-          featureCardStyle={style["feature-card"]}
-          featureIconStyle={style["feature-icon"]}
-          featureTitleStyle={style["feature-title"]}
-          featureTextStyle={style["feature-text"]}
-        />
-      ))}
-
+      <div className={style["feature-container"]}>
+        {featureCardData.map((data, i) => (
+          <FeatureCard
+            key={i}
+            img={data.img}
+            title={data.title}
+            text={data.text}
+            featureCardStyle={style["feature-card"]}
+            featureIconStyle={style["feature-icon"]}
+            featureTitleStyle={style["feature-title"]}
+            featureTextStyle={style["feature-text"]}
+          />
+        ))}
+      </div>
       <InvitatinCard />
     </>
   );

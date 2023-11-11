@@ -1,0 +1,33 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 53px;
+}
+.navigation-list {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  gap: 37px;
+}
+
+.list a {
+  list-style: none;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.btn {
+  width: 158px;
+  height: 40px;
+  color: var(--white);
+  background: var(--black);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+}

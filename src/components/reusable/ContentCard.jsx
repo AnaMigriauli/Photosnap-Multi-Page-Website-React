@@ -16,10 +16,11 @@ const ContentCard = ({
   dataAuthorStyle,
   border,
   arrowIconStyle,
+  imgStyle,
 }) => {
   return (
     <div className={mainContainer}>
-      <img src={img} />
+      <img src={img} className={imgStyle} />
       <div className={containerStyle}>
         <div className={border}></div>
         {storie && <h4 className={storieStyle}>{storie}</h4>}

@@ -5,7 +5,8 @@
   display: block;
 }
 .container {
-  width: 375px;
+  /* width: 375px; */
+  width: 100%;
   height: 300px;
   color: var(--white);
   padding: 0 28px 72px 29px;
@@ -149,7 +150,8 @@
   color: var(--black);
 }
 .price-features-option {
-  width: 375px;
+  /* width: 375px; */
+  width: 100%;
   padding: 40px 28px 64.5px 29px;
   color: var(--black);
 }
@@ -197,4 +199,17 @@
   height: 1px;
   background: var(--gray);
   margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .main-container {
+    display: flex;
+    height: 490px;
+  }
+  .main-container img {
+    order: 2;
+  }
+  .container {
+    order: 1;
+    padding: 173px 54px;
+  }
 }
