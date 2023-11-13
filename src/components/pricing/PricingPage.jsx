@@ -147,6 +147,8 @@ const PricingPage = () => {
             text={data.text}
             price={isLeft ? data.priceMonth : data.priceYear}
             month={isLeft ? data.month : data.year}
+            priceContainer={style["price-box"]}
+            priceContainer2={style["price-box2"]}
             borderTopStyle={active[i].active && style["border-top"]}
             priceContainerStyle={
               active[i].active
@@ -168,7 +170,19 @@ const PricingPage = () => {
         ))}
       </div>
       <div className={style["price-features-option"]}>
-        <h4 className={style.feature}>THE FEATURES</h4>
+        {window.innerWidth >= 768 && (
+          <h2 className={style["feature-table"]}>COMPARE</h2>
+        )}
+        <div className={style["feature-header"]}>
+          <h4 className={style.feature}>THE FEATURES</h4>
+          {window.innerWidth >= 768 && (
+            <div className={style["header-option"]}>
+              <p>BASIC</p>
+              <p>PRO</p>
+              <p>BUSINESS</p>
+            </div>
+          )}
+        </div>
         <div className={style["feature-border"]}></div>
         {featureTableData.map((el, i) => (
           <FeatureTable
@@ -183,6 +197,7 @@ const PricingPage = () => {
             vectorStyle={style.vector}
             optionStyle={style.option}
             borderBottomStyle={style["border-bottom"]}
+            tableContainerStyle={style["table-container"]}
           />
         ))}
       </div>

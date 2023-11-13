@@ -12,16 +12,18 @@ const PriceCard = ({
   PriceChooseHandler,
   borderTopStyle,
   textContentContainerStyle,
+  priceContainer,
+  priceContainer2,
 }) => {
   return (
     <div className={priceContainerStyle}>
       <div className={borderTopStyle}></div>
-      <div>
+      <div className={priceContainer}>
         <div className={textContentContainerStyle}>
           <h3 className={titleStyle}>{title}</h3>
           <p className={textStyle}>{text}</p>
         </div>
-        <div>
+        <div className={priceContainer2}>
           <p className={priceStyle}>{price}</p>
           <p className={monthStyle}>{month}</p>
         </div>
